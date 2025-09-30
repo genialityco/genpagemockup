@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-wrap: anywhere;
 }
 
 html {
@@ -17,10 +18,16 @@ body {
   background: #fefefe;
   min-height: 100vh;
   position: relative;
+  overflow-wrap: anywhere;
 }
 
 /* Neo-Warhol Pop-Art Typography System */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -34,7 +41,8 @@ h1 {
   position: relative;
 }
 
-h1 span, .pop-highlight {
+h1 span,
+.pop-highlight {
   background: linear-gradient(135deg, #fd7e14, #ff922b);
   color: #fff;
   padding: 0.25rem 0.75rem;
@@ -43,7 +51,7 @@ h1 span, .pop-highlight {
   position: relative;
   z-index: 2;
   -webkit-text-fill-color: #fff;
-  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -54,7 +62,7 @@ h2 {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   transform: rotate(-1deg);
-  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
@@ -65,7 +73,7 @@ h3 {
 }
 
 h3:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -5px;
   left: -5px;
@@ -97,13 +105,13 @@ h3:before {
 
 .section.invert .pop-highlight {
   /* background: #fff; */
-    background: #ff6600;
+  background: #ff6600;
   color: #000;
 }
 
 /* Neo-Warhol Geometric Accents */
 .section:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50px;
   left: -50px;
@@ -122,11 +130,12 @@ h3:before {
 }
 
 .mantine-Card-root {
-    border: none !important;
+  border: none !important;
 }
 
-.mantine-SimpleGrid-root p,h3  {
-    color: #333 !important;
+.mantine-SimpleGrid-root p,
+h3 {
+  color: #333 !important;
 }
 
 /* Pop-Art Grid System */
@@ -163,7 +172,7 @@ h3:before {
 }
 
 .color-block:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -187,7 +196,7 @@ h3:before {
 }
 
 .mantine-Button-root:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -205,7 +214,7 @@ h3:before {
 .mantine-Button-root:hover {
   color: #fff;
   transform: translateX(5px) translateY(-5px);
-  box-shadow: -5px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Pop-Art Cards */
@@ -219,7 +228,7 @@ h3:before {
 }
 
 .mantine-Card-root:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -230,7 +239,7 @@ h3:before {
 }
 
 .mantine-Card-root:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -247,8 +256,7 @@ h3:before {
 
 /* Halftone Pop-Art Effects */
 .halftone-bg {
-  background: 
-    radial-gradient(circle at 25% 25%, #ff6600 2px, transparent 2px),
+  background: radial-gradient(circle at 25% 25%, #ff6600 2px, transparent 2px),
     radial-gradient(circle at 75% 75%, #fd7e14 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
@@ -265,8 +273,7 @@ h3:before {
 .hero-grid {
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
@@ -311,7 +318,7 @@ h3:before {
 }
 
 .editorial-link:after {
-  content: '→';
+  content: "→";
   margin-left: 0.5em;
   transition: transform 0.2s ease;
 }
@@ -326,13 +333,19 @@ h3:before {
 }
 
 .overlay-orange:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(255, 102, 0, 0.1) 30%, rgba(255, 102, 0, 0.1) 70%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 102, 0, 0.1) 30%,
+    rgba(255, 102, 0, 0.1) 70%,
+    transparent 70%
+  );
   pointer-events: none;
   z-index: 1;
 }
@@ -382,28 +395,32 @@ h3:before {
 /* Responsive Neo-Warhol Design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
     font-size: 2rem;
   }
-  
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
   .pop-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .pop-number {
     font-size: 8rem;
   }
-  
+
   .section {
     padding: 4rem 0;
   }
-  
+
   .editorial-text {
     font-size: 1.25rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
   }
 }
 
@@ -416,7 +433,7 @@ h3:before {
     color: #fff;
     border: 2px solid #fff;
   }
-  
+
   .section.invert .color-block,
   .section.invert .pop-highlight {
     background: #fff;
@@ -427,9 +444,16 @@ h3:before {
 
 /* Animation: Warhol Pop */
 @keyframes warholPop {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  25% { transform: scale(1.05) rotate(-1deg); }
-  75% { transform: scale(0.95) rotate(1deg); }
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+  75% {
+    transform: scale(0.95) rotate(1deg);
+  }
 }
 
 .pop-animation {
@@ -464,13 +488,14 @@ h3:before {
 }
 
 .pop-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23fd7e14" opacity="0.05"><circle cx="10" cy="10" r="1"/></svg>') repeat;
+  background: url('data:image/svg+xml,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23fd7e14" opacity="0.05"><circle cx="10" cy="10" r="1"/></svg>')
+    repeat;
   background-size: 20px 20px;
   pointer-events: none;
 }
@@ -485,7 +510,7 @@ h3:before {
 }
 
 .nav-link-pop::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -507,7 +532,7 @@ h3:before {
 }
 
 .nav-link-pop.active::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
@@ -525,7 +550,7 @@ h3:before {
 }
 
 .mobile-nav-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -550,7 +575,7 @@ h3:before {
 }
 
 .nav-pop-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -568,7 +593,7 @@ h3:before {
     text-align: center;
     border-bottom: 1px solid rgba(253, 126, 20, 0.1);
   }
-  
+
   .nav-link-pop:hover {
     background: rgba(253, 126, 20, 0.1);
     color: #fd7e14;
@@ -578,8 +603,13 @@ h3:before {
 
 /* Geometric Accent Animations for Mobile Menu */
 @keyframes floatGeometric {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(180deg); }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
 }
 
 .geometric-accent {
@@ -600,8 +630,7 @@ h3:before {
 
 /* Mobile Menu Background Pattern */
 .mobile-menu-bg {
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(253, 126, 20, 0.1) 0%, transparent 50%),
+  background: radial-gradient(circle at 20% 80%, rgba(253, 126, 20, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(253, 126, 20, 0.05) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(253, 126, 20, 0.02) 0%, transparent 50%);
 }
@@ -620,12 +649,12 @@ h3:before {
     background: #000;
     border-bottom: 4px solid #fff;
   }
-  
+
   .nav-link-pop {
     color: #fff;
     border: 1px solid #fff;
   }
-  
+
   .nav-link-pop.active {
     background: #fff;
     color: #000;
@@ -643,7 +672,7 @@ footer .social-link {
 }
 
 footer .social-link::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -660,20 +689,19 @@ footer .social-link:hover::before {
 /* Pop-Art Footer Background Pattern */
 footer {
   position: relative;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(253, 126, 20, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(253, 126, 20, 0.03) 0%, transparent 50%),
-    #000;
+  background: radial-gradient(circle at 10% 20%, rgba(253, 126, 20, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(253, 126, 20, 0.03) 0%, transparent 50%), #000;
 }
 
 footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="%23fd7e14" opacity="0.02"><circle cx="20" cy="20" r="2"/></svg>') repeat;
+  background: url('data:image/svg+xml,<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="%23fd7e14" opacity="0.02"><circle cx="20" cy="20" r="2"/></svg>')
+    repeat;
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -692,7 +720,7 @@ footer a {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   footer .social-link {
     width: 100%;
     justify-content: center;
