@@ -4,6 +4,7 @@ import { MantineProvider, createTheme } from '@mantine/core'
 import '@mantine/core/styles.css'
 import './styles/global.css'
 
+import ScrollToTop from './components/ScrollToTop'
 import GenialityLanding from './pages/GenialityLanding'
 import GenNetworking from './pages/GenNetworking'
 import GenCampus from './pages/GenCampus'
@@ -64,6 +65,7 @@ export default function App() {
   return (
     <MantineProvider theme={theme}>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<GenialityLanding />} />
           <Route path="/gen-networking" element={<GenNetworking />} />
