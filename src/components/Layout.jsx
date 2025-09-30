@@ -1,12 +1,24 @@
 import React from 'react'
-import { AppShell, Container } from '@mantine/core'
+import { Box } from '@mantine/core'
 import Header from './Header'
 import Footer from './Footer'
 
 export default function Layout({ children }) {
   return (
-    <AppShell header={<Header />} footer={<Footer />}>
-      <Container>{children}</Container>
-    </AppShell>
+    <Box>
+      <Header />
+      
+      <Box
+        component="main"
+        style={{
+          paddingTop: '80px', // Account for fixed header
+          minHeight: 'calc(100vh - 80px)'
+        }}
+      >
+        {children}
+      </Box>
+      
+      <Footer />
+    </Box>
   )
 }
