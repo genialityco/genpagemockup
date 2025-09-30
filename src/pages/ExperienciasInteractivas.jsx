@@ -104,7 +104,8 @@ export default function ExperienciasInteractivas() {
           </Title>
           
           <SimpleGrid cols={{ base: 1, md: 3 }} spacing="xl">
-            <Card className="pop-animation">
+            <Card className="">
+                 {/* <Card className="pop-animation"> */}
               <ThemeIcon 
                 color="orange" 
                 size="xl" 
@@ -123,7 +124,7 @@ export default function ExperienciasInteractivas() {
               </Text>
             </Card>
             
-            <Card className="pop-animation" style={{ animationDelay: '0.5s' }}>
+            <Card className="" style={{ animationDelay: '0.5s' }}>
               <ThemeIcon 
                 color="orange" 
                 size="xl" 
@@ -142,7 +143,7 @@ export default function ExperienciasInteractivas() {
               </Text>
             </Card>
             
-            <Card className="pop-animation" style={{ animationDelay: '1s' }}>
+            <Card className="" style={{ animationDelay: '1s' }}>
               <ThemeIcon 
                 color="orange" 
                 size="xl" 

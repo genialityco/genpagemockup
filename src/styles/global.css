@@ -86,7 +86,7 @@ h3:before {
 }
 
 .section.invert {
-  background: #000;
+  background: #eeeeee;
   color: #fff;
 }
 
@@ -96,7 +96,8 @@ h3:before {
 }
 
 .section.invert .pop-highlight {
-  background: #fff;
+  /* background: #fff; */
+    background: #ff6600;
   color: #000;
 }
 
@@ -118,6 +119,14 @@ h3:before {
   right: -50px;
   left: auto;
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.mantine-Card-root {
+    border: none !important;
+}
+
+.mantine-SimpleGrid-root p,h3  {
+    color: #333 !important;
 }
 
 /* Pop-Art Grid System */
