@@ -1,167 +1,115 @@
-import React from "react";
-import {
-  Container,
-  Title,
-  Text,
-  Button,
-  Group,
-  Card,
-  SimpleGrid,
-} from "@mantine/core";
+/**Got it ✅ — you want to push this into a radical editorial style (neo-Warhol punch,
+ *  pop-art halftones, orange overlays), neo-Warhol / radical editorial magazine */
+
+import { Container, Title, Text, Group, Anchor } from "@mantine/core";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
+import Logo from "../assets/LOGOS_GEN.iality_web-02.svg";
+import classes from "./../Landing.module.css";
 
-function SolutionCard({ title, desc, link }) {
+/* BusinessLine component (JSX, no TypeScript types) */
+function BusinessLine({ number, title, description, link, invert }) {
   return (
-    <Card shadow="sm" padding="lg" radius="md" withBorder>
-      <Title order={4} color="indigo">
-        {title}
-      </Title>
-      <Text mt="sm">{desc}</Text>
-      <Button
-        component={Link}
-        to={link}
-        variant="subtle"
-        color="indigo"
-        mt="md"
-      >
-        Conoce más →
-      </Button>
-    </Card>
+    <section className={`${classes.section} ${invert ? classes.invert : ""}`}>
+      {/* Background accent (visual) */}
+      <div className={classes.backgroundAccent} />
+
+      <Container size="lg" className={classes.grid}>
+        {/* Left Column */}
+        <div className={classes.left}>
+          <span className={classes.number}>{number}</span>
+          <Title order={2} className={classes.title}>
+            {title}
+          </Title>
+        </div>
+
+        {/* Right Column */}
+        <div className={classes.right}>
+          <Text size="lg" className={classes.description}>
+            {description}
+          </Text>
+          <Anchor component={Link} to={link} className={classes.cta}>
+            Descubre más →
+          </Anchor>
+        </div>
+      </Container>
+    </section>
   );
 }
 
+/* Main page */
 export default function GenialityLanding() {
   return (
     <Layout>
-      {/* HERO */}
-      <Container id="inicio" py="xl" align="center">
-        <Title order={1} align="center" color="indigo">
-          En Geniality creemos en el poder del conocimiento y las relaciones
-          humanas
-        </Title>
-        <Text size="lg" mt="md" align="center" maw={900}>
-          Hemos verificado que son los <b>pilares que permiten superar cualquier
-          obstáculo</b>. Hoy, acceder a información valiosa y conectar con las
-          personas correctas es más difícil que nunca.  
-          <br />
-          <br />
-          Por eso creamos <b>plataformas, tecnología y experiencias
-          interactivas</b> que combinan <b>tecnología, neurociencia y
-          creatividad</b> para activar emociones, generar memorias imborrables y
-          entregar <b>resultados medibles</b>.
-        </Text>
-        <Group mt="xl" position="center">
-          <Button
-            component="a"
-            href="#soluciones"
-            color="indigo"
-            radius="xl"
-            size="md"
-          >
-            Descubre nuestras soluciones
-          </Button>
-          <Button
-            component="a"
-            href="#contacto"
-            variant="outline"
-            color="indigo"
-            radius="xl"
-            size="md"
-          >
-            Agenda una reunión
-          </Button>
-        </Group>
-      </Container>
+      <main className={classes.page}>
+        {/* HERO SECTION */}
+        <section className={classes.hero}>
+          <div className={classes.heroGrid} />
+          <Container size="lg" className={classes.heroContent}>
+            <img src={Logo} alt="Geniality Logo" className={classes.logo} />
 
-      {/* OFERTA DE VALOR */}
-      <Container py="xl" align="center">
-        <Title order={2}>Nuestra Promesa</Title>
-        <Text mt="md" maw={800}>
-          Con Geniality, los eventos, el conocimiento y los contactos no son un gasto: se convierten en{" "}
-          <b>conexiones estratégicas, aprendizaje aplicado y un ROI real</b> para
-          marcas, asociaciones y asistentes.
-        </Text>
-      </Container>
+            <Title order={1} className={classes.heroTitle}>
+              Conocimiento & <span>Relaciones</span> que transforman
+            </Title>
 
-      {/* LÍNEAS DE NEGOCIO */}
-      <Container id="soluciones" py="xl">
-        <Title order={2} align="center" mb="lg">
-          Nuestras Líneas de Negocio
-        </Title>
-        <SimpleGrid cols={2} spacing="lg">
-          <SolutionCard
+            <Text size="xl" className={classes.heroText}>
+              En Geniality nos inspiramos en el{" "}
+              <span className={classes.highlight}>poder del conocimiento</span> y
+              las <span className={classes.highlight}>relaciones humanas</span>.
+              Creamos plataformas, tecnología y experiencias interactivas que
+              combinan <span className={classes.highlight}>tecnología</span>,{" "}
+              <span className={classes.highlight}>neurociencia</span> y{" "}
+              <span className={classes.highlight}>creatividad</span> para activar
+              emociones y entregar resultados medibles.
+            </Text>
+
+            {/* <Group justify="center" mt="xl">
+              <Anchor component={Link} to="#soluciones" className={classes.ctaBig}>
+                Descubre nuestras soluciones →
+              </Anchor>
+              <Anchor component={Link} to="/contacto" className={classes.ctaBigAlt}>
+                Agenda una reunión →
+              </Anchor>
+            </Group> */}
+          </Container>
+        </section>
+
+        {/* BUSINESS LINES */}
+        <div id="soluciones">
+          <BusinessLine
+            number="01"
             title="Experiencias Interactivas"
-            desc="De eventos comunes a recuerdos imborrables. Neurociencia, tecnología y creatividad al servicio de tu marca."
+            description="De eventos comunes a recuerdos imborrables. Neurociencia, tecnología y creatividad al servicio de tu marca."
             link="/experiencias-interactivas"
           />
-          <SolutionCard
+          <BusinessLine
+            number="02"
             title="Gen.Networking"
-            desc="De conversaciones casuales a conexiones estratégicas con IA y analítica en tiempo real."
+            description="De conversaciones casuales a conexiones estratégicas con IA y analítica en tiempo real."
             link="/gen-networking"
+            invert
           />
-          <SolutionCard
+          <BusinessLine
+            number="03"
             title="Gen.Campus"
-            desc="De la infoxicación al conocimiento claro y aplicable con un asistente profesional global."
+            description="De mucha información a conocimientos claros y aplicables para uso y crecimiento practicos potenciado con asistentes profesionales IA y humanos globales."
             link="/gen-campus"
           />
-          <SolutionCard
+          <BusinessLine
+            number="04"
             title="Congreso Potenciado"
-            desc="De congresos tradicionales a experiencias memorables con storytelling, neurociencia y ROI medible."
+            description="De congresos tradicionales a experiencias memorables con storytelling, neurociencia y ROI medible."
             link="/congreso-potenciado"
+            invert
           />
-          <SolutionCard
+          <BusinessLine
+            number="05"
             title="Gen.Live"
-            desc="De webinars pasivos a experiencias virtuales evolucionadas con agentes AI y datos accionables."
+            description="De webinars pasivos a experiencias virtuales evolucionadas con agentes AI y datos accionables."
             link="/gen-live"
           />
-        </SimpleGrid>
-      </Container>
-
-      {/* CONTACTO */}
-      <Container id="contacto" py="xl" align="center">
-        <Title order={2}>Hablemos de tu próximo evento</Title>
-        <form style={{ maxWidth: 500, margin: "0 auto" }}>
-          <input
-            type="text"
-            placeholder="Nombre"
-            required
-            style={{
-              width: "100%",
-              padding: "12px",
-              marginTop: "12px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-            }}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            style={{
-              width: "100%",
-              padding: "12px",
-              marginTop: "12px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-            }}
-          />
-          <textarea
-            placeholder="Cuéntanos tu interés"
-            rows="4"
-            style={{
-              width: "100%",
-              padding: "12px",
-              marginTop: "12px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-            }}
-          />
-          <Button type="submit" color="indigo" radius="xl" mt="md">
-            Enviar
-          </Button>
-        </form>
-      </Container>
+        </div>
+      </main>
     </Layout>
   );
 }

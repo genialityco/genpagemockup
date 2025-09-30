@@ -1,0 +1,144 @@
+.page {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+  position: relative;
+  padding: 10rem 0;
+  background: #fefefe;
+  overflow: hidden;
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.heroTitle {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.heroTitle span {
+  background: linear-gradient(135deg, #fd7e14, #ff922b);
+  color: #fff;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-text-fill-color:#fefefe;
+}
+
+.heroText {
+  font-size: 1.6rem;
+  max-width: 65ch;
+  line-height: 1.6;
+}
+
+.heroText span {
+  color: #ff6600;
+  font-weight: 700;
+}
+
+/* ----------------- BUSINESS LINES ----------------- */
+.section {
+  position: relative;
+  padding: 8rem 0;
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+.section.invert {
+  background: #666;
+  color: #fff;
+}
+
+.section.invert p {
+  color: #fff;
+}
+
+.backgroundAccent {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: #ff6600;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.left {
+  position: relative;
+}
+
+.number {
+  font-size: 12rem;
+  font-weight: 900;
+  opacity: 0.08;
+  line-height: 1;
+  display: block;
+  margin-bottom: -2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  z-index: 2;
+  position: relative;
+  background: #ff6600;
+  color: #fff;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.cta {
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  width: fit-content;
+  transition: all 0.2s;
+}
+
+.cta:hover {
+  color: #ff6600;
+  border-color: #ff6600;
+}

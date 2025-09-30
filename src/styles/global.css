@@ -1,4 +1,4 @@
-/* Global Styles - Orange Minimalistic Design */
+/* Global Styles - Neo-Warhol Pop-Art Radical Editorial */
 
 * {
   margin: 0;
@@ -11,45 +11,170 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: #212529;
-  background: linear-gradient(135deg, #fff4e6 0%, #ffffff 100%);
+  background: #fefefe;
   min-height: 100vh;
+  position: relative;
 }
 
-/* Typography */
+/* Neo-Warhol Pop-Art Typography System */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 900;
+  line-height: 1.1;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
+  font-weight: 900;
+  position: relative;
+}
+
+h1 span, .pop-highlight {
   background: linear-gradient(135deg, #fd7e14, #ff922b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  display: inline-block;
+  border-radius: 0.25rem;
+  position: relative;
+  z-index: 2;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
 }
 
 h2 {
-  font-size: 2.5rem;
-  color: #e8590c;
+  font-size: 3rem;
+  font-weight: 900;
+  background: #ff6600;
+  color: #fff;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  transform: rotate(-1deg);
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 h3 {
-  font-size: 1.75rem;
-  color: #fd7e14;
+  font-size: 2rem;
+  color: #000;
+  font-weight: 900;
+  position: relative;
 }
 
-/* Buttons */
-.mantine-Button-root {
-  font-weight: 600;
-  text-transform: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+h3:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, transparent 30%, #ff6600 30%, #ff6600 70%, transparent 70%);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+/* Radical Editorial Layout System */
+.section {
+  position: relative;
+  padding: 8rem 0;
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+}
+
+.section.invert {
+  background: #000;
+  color: #fff;
+}
+
+.section.invert h2 {
+  background: #fff;
+  color: #000;
+}
+
+.section.invert .pop-highlight {
+  background: #fff;
+  color: #000;
+}
+
+/* Neo-Warhol Geometric Accents */
+.section:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: #ff6600;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.section:nth-child(even):before {
+  right: -50px;
+  left: auto;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* Pop-Art Grid System */
+.pop-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.pop-number {
+  font-size: 12rem;
+  font-weight: 900;
+  opacity: 0.08;
+  line-height: 1;
+  display: block;
+  margin-bottom: -2rem;
+  color: #ff6600;
+}
+
+/* Warhol-Inspired Color Blocks */
+.color-block {
+  background: linear-gradient(135deg, #fd7e14, #ff922b);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0;
   position: relative;
   overflow: hidden;
+}
+
+.color-block:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h2v2H0V0zm2 2h2v2H2V2z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+/* Editorial Magazine-Style Buttons */
+.mantine-Button-root {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 3px solid currentColor;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
 }
 
 .mantine-Button-root:before {
@@ -59,27 +184,29 @@ h3 {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+  background: currentColor;
+  transition: left 0.3s ease;
+  z-index: -1;
 }
 
 .mantine-Button-root:hover:before {
-  left: 100%;
+  left: 0;
 }
 
 .mantine-Button-root:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(253, 126, 20, 0.3), 0 10px 10px -5px rgba(253, 126, 20, 0.2);
+  color: #fff;
+  transform: translateX(5px) translateY(-5px);
+  box-shadow: -5px 5px 0px rgba(0,0,0,0.2);
 }
 
-/* Cards */
+/* Pop-Art Cards */
 .mantine-Card-root {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(253, 126, 20, 0.1);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  border: 3px solid #000;
+  border-radius: 0;
+  background: #fff;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .mantine-Card-root:before {
@@ -88,191 +215,223 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 8px;
   background: linear-gradient(90deg, #fd7e14, #ff922b, #ffc078);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.mantine-Card-root:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff6600' fill-opacity='0.03'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 1;
 }
 
 .mantine-Card-root:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(253, 126, 20, 0.2), 0 10px 10px -5px rgba(253, 126, 20, 0.1);
-  border-color: rgba(253, 126, 20, 0.3);
+  transform: translateX(8px) translateY(-8px);
+  box-shadow: -8px 8px 0px rgba(255, 102, 0, 0.3);
 }
 
-.mantine-Card-root:hover:before {
-  transform: scaleX(1);
+/* Halftone Pop-Art Effects */
+.halftone-bg {
+  background: 
+    radial-gradient(circle at 25% 25%, #ff6600 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #fd7e14 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
 }
 
-/* Hero Section */
+/* Neo-Warhol Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, 
-    rgba(255, 244, 230, 0.8) 0%, 
-    rgba(255, 255, 255, 0.9) 50%, 
-    rgba(255, 232, 204, 0.8) 100%);
+  background: #fefefe;
   position: relative;
   overflow: hidden;
+  padding: 10rem 0;
 }
 
-.hero-section:before {
-  content: '';
+.hero-grid {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fd7e14' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  animation: float 20s infinite linear;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
 }
 
-@keyframes float {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+/* Radical Typography Treatments */
+.editorial-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
-/* Section Spacing */
-.section {
-  padding: 5rem 0;
+.editorial-text strong,
+.editorial-highlight {
+  background: #ff6600;
+  color: #fff;
+  padding: 0.1em 0.3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+/* Magazine-Style Links */
+.editorial-link {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 3px solid currentColor;
+  color: #000;
+  transition: all 0.2s ease;
+  display: inline-block;
   position: relative;
 }
 
-.section:nth-child(even) {
-  background: rgba(248, 249, 250, 0.5);
-}
-
-/* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, #fd7e14, #ff922b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Container Enhancements */
-.mantine-Container-root {
-  position: relative;
-}
-
-/* Form Styling */
-input, textarea {
-  transition: all 0.3s ease;
-  border: 2px solid rgba(253, 126, 20, 0.1) !important;
-  background: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(10px);
-}
-
-input:focus, textarea:focus {
-  border-color: #fd7e14 !important;
-  box-shadow: 0 0 0 3px rgba(253, 126, 20, 0.1) !important;
+.editorial-link:hover {
+  color: #ff6600;
   transform: translateY(-2px);
 }
 
-/* Navigation Enhancements */
-.mantine-Anchor-root {
-  color: #6c757d;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+.editorial-link:after {
+  content: '→';
+  margin-left: 0.5em;
+  transition: transform 0.2s ease;
+}
+
+.editorial-link:hover:after {
+  transform: translateX(5px);
+}
+
+/* Pop-Art Color Overlays */
+.overlay-orange {
   position: relative;
 }
 
-.mantine-Anchor-root:hover {
-  color: #fd7e14;
-  transform: translateY(-1px);
-}
-
-.mantine-Anchor-root:after {
+.overlay-orange:before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 50%;
-  background: linear-gradient(90deg, #fd7e14, #ff922b);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 102, 0, 0.1) 30%, rgba(255, 102, 0, 0.1) 70%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.mantine-Anchor-root:hover:after {
-  width: 100%;
+/* Warhol-Style Number Graphics */
+.big-number {
+  font-size: 12rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 102, 0, 0.1);
+  position: absolute;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
-/* Text Enhancements */
-.mantine-Text-root {
-  color: #495057;
-  line-height: 1.7;
+/* Editorial Magazine Containers */
+.magazine-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Loading Animation */
-.fade-in {
-  animation: fadeIn 0.8s ease-out;
+/* Pop-Art Geometric Shapes */
+.geometric-accent {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #ff6600;
+  opacity: 0.2;
+  z-index: 0;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.geometric-accent.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-/* Responsive Design */
+.geometric-accent.circle {
+  border-radius: 50%;
+}
+
+.geometric-accent.square {
+  transform: rotate(45deg);
+}
+
+/* Responsive Neo-Warhol Design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   h2 {
     font-size: 2rem;
   }
   
+  .pop-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .pop-number {
+    font-size: 8rem;
+  }
+  
   .section {
-    padding: 3rem 0;
+    padding: 4rem 0;
+  }
+  
+  .editorial-text {
+    font-size: 1.25rem;
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .color-block,
+  .pop-highlight,
+  .editorial-highlight {
+    background: #000;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .section.invert .color-block,
+  .section.invert .pop-highlight {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #f8f9fa;
+/* Animation: Warhol Pop */
+@keyframes warholPop {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(-1deg); }
+  75% { transform: scale(0.95) rotate(1deg); }
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #fd7e14, #ff922b);
-  border-radius: 4px;
+.pop-animation {
+  animation: warholPop 2s ease-in-out infinite;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #e8590c, #fd7e14);
-}
-
-/* Floating Elements */
-.floating {
-  animation: floating 3s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Glass Morphism Effect */
-.glass {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Orange Accent Lines */
-.accent-line {
-  height: 4px;
-  background: linear-gradient(90deg, #fd7e14, #ff922b, #ffc078);
-  border-radius: 2px;
-  margin: 2rem 0;
+/* Print-Style Elements */
+.print-style {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 0.9;
 }
