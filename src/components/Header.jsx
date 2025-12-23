@@ -18,12 +18,12 @@ export default function Header() {
   const location = useLocation()
   
   const navigationItems = [
-    { label: 'Inicio', href: '/', isHome: true },
-    { label: 'Experiencias Interactivas', href: '/experiencias-interactivas' },
-    { label: 'Gen.Networking', href: '/gen-networking' },
-    { label: 'Gen.Campus', href: '/gen-campus' },
-    { label: 'Congreso Potenciado', href: '/congreso-potenciado' },
-    { label: 'Gen.Live', href: '/gen-live' },
+    // { label: 'Inicio', href: '/', isHome: true },
+    // { label: 'Experiencias Interactivas', href: '/experiencias-interactivas' },
+    // { label: 'Gen.Networking', href: '/gen-networking' },
+    // { label: 'Gen.Campus', href: '/gen-campus' },
+    // { label: 'Congreso Potenciado', href: '/congreso-potenciado' },
+    // { label: 'Gen.Live', href: '/gen-live' },
   ]
   
   const isActive = (href) => {

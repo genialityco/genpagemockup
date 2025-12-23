@@ -78,6 +78,12 @@ export default function GenialityLanding() {
         <div id="soluciones">
           <BusinessLine
             number="01"
+            title="Artificial Inteligence & Robotica Social"
+            description="El mundo ha cambiado, estamos en una era de innovación tecnológica sin precedentes, que estan reconfigurnando todas las industrias. Con nuestra asesoría da el salto para el uso de agentes y robots  que  potencian y transforman el futuro de tu organización."
+            link=""
+          />
+          {/* <BusinessLine
+            number="01"
             title="Experiencias Interactivas"
             description="De eventos comunes a recuerdos imborrables. Neurociencia, tecnología y creatividad al servicio de tu marca."
             link="/experiencias-interactivas"
@@ -88,26 +94,26 @@ export default function GenialityLanding() {
             description="De conversaciones casuales a conexiones estratégicas con IA y analítica en tiempo real."
             link="/gen-networking"
             invert
-          />
+          /> */}
           <BusinessLine
-            number="03"
+            number="02"
             title="Gen.Campus"
             description="De mucha información a conocimientos claros y aplicables para uso y crecimiento practicos potenciado con asistentes profesionales IA y humanos globales."
             link="/gen-campus"
           />
           <BusinessLine
-            number="04"
+            number="03"
             title="Congreso Potenciado"
-            description="De congresos tradicionales a experiencias memorables con storytelling, neurociencia y ROI medible."
+            description="De congresos tradicionales a experiencias memorables con storytelling, neurociencia y ROI medible, garantizando mejores ingersos y mayor recordación."
             link="/congreso-potenciado"
             invert
           />
-          <BusinessLine
+          {/* <BusinessLine
             number="05"
             title="Gen.Live"
             description="De webinars pasivos a experiencias virtuales evolucionadas con agentes AI y datos accionables."
             link="/gen-live"
-          />
+          /> */}
         </div>
       </main>
     </Layout>
