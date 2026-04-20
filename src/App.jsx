@@ -11,6 +11,7 @@ import GenCampus from './pages/GenCampus'
 import CongresoPotenciado from './pages/CongresoPotenciado'
 import GenLive from "./pages/GenLive"
 import ExperienciasInteractivas from "./pages/ExperienciasInteractivas"
+import PoliticasPrivacidad from './pages/PoliticaPrivacidad'
 
 const theme = createTheme({
   colors: {
@@ -76,6 +77,7 @@ export default function App() {
             path="/experiencias-interactivas"
             element={<ExperienciasInteractivas />}
           />
+          <Route path="/politica-privacidad" element={<PoliticasPrivacidad />} />
         </Routes>
       </Router>
     </MantineProvider>
